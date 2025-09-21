@@ -5,25 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Lokesh Premkumar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+            color: #e0e0e0;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid #00ffcc;
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+        }
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ffcc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+        }
+        .holo-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .holo-effect::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.1) 0%, transparent 70%);
+            animation: hologram 10s infinite;
+            z-index: -1;
+        }
+        @keyframes hologram {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .link {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .link:hover {
+            color: #ff007a;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid #00ffcc;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-900 text-white py-8">
-        <div class="container mx-auto text-center">
-            <h1 class="text-3xl font-bold">Project Details</h1>
-            <a href="index.html" class="text-blue-300 hover:underline">Back to Home</a>
+<body>
+
+    <header class="header py-6">
+        <div class="container mx-auto text-center holo-effect">
+            <h1 class="text-4xl font-bold text-[#00ffcc] drop-shadow-lg">Project Details</h1>
+            <a href="index.html" class="link mt-2 inline-block">Back to Home</a>
         </div>
     </header>
+
     <main class="container mx-auto py-8">
-        <section class="p-6 bg-white rounded-lg shadow-md">
-            <ul class="list-disc ml-6">
+        <section class="section holo-effect">
+            <ul class="list-disc ml-6 text-gray-200">
                 <li>Worked as Software Architect, Detailed Designer and Developer in the ‘Particulate Matter’ Sensor projects in Automotive domain for Mercedes Benz, Volkswagen, Ford, and Internal Projects.</li>
                 <li>Worked as Detailed Designer and Developer in the “Fuel Cell EV” (Hydrogen powered Fuel Cell) automotive projects for Nikola and internal projects.</li>
                 <li>Worked as Detailed Designer and Software Architect for SecOC(Secure Onboard Communication) project.</li>
             </ul>
         </section>
     </main>
-    <footer class="bg-blue-900 text-white py-4 text-center">
-        <p>&copy; 2025 Lokesh Premkumar. All rights reserved.</p>
+
+    <footer class="footer py-4 text-center">
+        <p class="text-white">&copy; 2025 Lokesh Premkumar. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

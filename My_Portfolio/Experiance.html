@@ -5,28 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Experience - Lokesh Premkumar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+            color: #e0e0e0;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid #00ffcc;
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+        }
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ffcc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+        }
+        .holo-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .holo-effect::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.1) 0%, transparent 70%);
+            animation: hologram 10s infinite;
+            z-index: -1;
+        }
+        @keyframes hologram {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .link {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .link:hover {
+            color: #ff007a;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid #00ffcc;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-900 text-white py-8">
-        <div class="container mx-auto text-center">
-            <h1 class="text-3xl font-bold">Professional Experience</h1>
-            <a href="index.html" class="text-blue-300 hover:underline">Back to Home</a>
+<body>
+
+    <header class="header py-6">
+        <div class="container mx-auto text-center holo-effect">
+            <h1 class="text-4xl font-bold text-[#00ffcc] drop-shadow-lg">Professional Experience</h1>
+            <a href="index.html" class="link mt-2 inline-block">Back to Home</a>
         </div>
     </header>
+
     <main class="container mx-auto py-8">
-        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-2">Technical Assistant</h2>
-            <p class="text-gray-600">Karlsruhe Institute of Technology | Karlsruhe, Germany | 01/08/2024 – 30/11/2024</p>
-            <ul class="list-disc ml-6 mt-4">
+        <section class="section holo-effect">
+            <h2 class="text-2xl font-bold mb-2 text-[#00ffcc]">Technical Assistant</h2>
+            <p class="text-gray-300">Karlsruhe Institute of Technology | Karlsruhe, Germany | 01/08/2024 – 30/11/2024</p>
+            <ul class="list-disc ml-6 mt-4 text-gray-200">
                 <li>Experience in Symmetric -Asymmetric Task Handling(RTOS) programs</li>
                 <li>Knowledge on ZCU102 Board Configuration for Audio applications.</li>
                 <li>Knowledge on I2C Protocols for Audio application configuration</li>
             </ul>
         </section>
-        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-2">Senior Software Engineer</h2>
-            <p class="text-gray-600">BOSCH Global Software pvt ltd | Bengaluru, India | 25/07/2022 – 12/02/2024</p>
-            <ul class="list-disc ml-6 mt-4">
+        <section class="section holo-effect">
+            <h2 class="text-2xl font-bold mb-2 text-[#00ffcc]">Senior Software Engineer</h2>
+            <p class="text-gray-300">BOSCH Global Software pvt ltd | Bengaluru, India | 25/07/2022 – 12/02/2024</p>
+            <ul class="list-disc ml-6 mt-4 text-gray-200">
                 <li>Well versed in the ASPICE layer for Automotive projects and AUTOSAR layer Architecture</li>
                 <li>Experience in Developing tools like Visual Studio, IAR, AEEE-pro IDE’s.</li>
                 <li>Well versed in Developing Languages like C, C++, Python, Matlab.</li>
@@ -42,10 +100,10 @@
                 <li>Experience in Integration Testing of the developed tasks with 80% success rate and 90% success rate in creating use cases in testing, Bug fixing and error debugging in Test automation.</li>
             </ul>
         </section>
-        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-2">Systems Engineer</h2>
-            <p class="text-gray-600">Jasmin Infotech Pvt ltd | Chennai, India | 15/07/2019 – 20/07/2022</p>
-            <ul class="list-disc ml-6 mt-4">
+        <section class="section holo-effect">
+            <h2 class="text-2xl font-bold mb-2 text-[#00ffcc]">Systems Engineer</h2>
+            <p class="text-gray-300">Jasmin Infotech Pvt ltd | Chennai, India | 15/07/2019 – 20/07/2022</p>
+            <ul class="list-disc ml-6 mt-4 text-gray-200">
                 <li>Well versed in the ASPICE layer for Automotive projects</li>
                 <li>Radio Application layer developer, versed with Softwares and Firmware like Jira, Visual Studio</li>
                 <li>Well versed with Error Debugging with an 80% success rate of solving problems.</li>
@@ -57,17 +115,19 @@
                 <li>Task closure for development with 70% on-time submission rate.</li>
             </ul>
         </section>
-        <section class="mb-8 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-2">Internship</h2>
-            <p class="text-gray-600">Jasmin Infotech Pvt ltd | Chennai, India | 03/12/2018 – 20/12/2018</p>
-            <ul class="list-disc ml-6 mt-4">
+        <section class="section holo-effect">
+            <h2 class="text-2xl font-bold mb-2 text-[#00ffcc]">Internship</h2>
+            <p class="text-gray-300">Jasmin Infotech Pvt ltd | Chennai, India | 03/12/2018 – 20/12/2018</p>
+            <ul class="list-disc ml-6 mt-4 text-gray-200">
                 <li>Working Experience on AMFM radio application</li>
                 <li>Experience on Radio testing for automotive domain</li>
             </ul>
         </section>
     </main>
-    <footer class="bg-blue-900 text-white py-4 text-center">
-        <p>&copy; 2025 Lokesh Premkumar. All rights reserved.</p>
+
+    <footer class="footer py-4 text-center">
+        <p class="text-white">&copy; 2025 Lokesh Premkumar. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
